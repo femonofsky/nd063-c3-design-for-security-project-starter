@@ -1,0 +1,15 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- WAF can be added in front of the loadbalancer using the OWASP 10 rules (https://owasp.org/www-project-top-ten/)
+- Make sure the S3 buckets have data encrypted.
+
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- No, we still need the IAM permissions to guard against unauthorized access.
+
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- Enabling encryption does not affect the existing objects but any new files will all be encrypted at rest.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+- No effect, it won't overwrite the changes.

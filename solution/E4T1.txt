@@ -1,0 +1,12 @@
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Disable SSH password login on the application web server.
+- Doesn't allow connection to all IP addresses in port 22 (SSH)
+
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Secret recipes bucket can be configured with appropriate BucketPolicy to allow access only from certain resources.
+- 
+
+
